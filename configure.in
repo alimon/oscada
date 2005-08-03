@@ -1,0 +1,117 @@
+
+AC_PREREQ(2.50)
+
+AC_INIT([OpenScada],[0.3.9],[rom_as@fromru.com])
+AM_INIT_AUTOMAKE(AC_PACKAGE_TARNAME, AC_PACKAGE_VERSION)
+AM_CONFIG_HEADER(config.h)
+# AC_CONFIG_SRCDIR([config.h.in])
+# AC_CONFIG_HEADER([config.h])
+
+# Checking host/target/build systems, for make, install etc.
+# AC_CANONICAL_SYSTEM
+
+# Perform program name transformation
+# AC_ARG_PROGRAM
+
+
+# Enable options
+AC_ENABLE_SHARED(yes)
+AC_ENABLE_STATIC(yes)
+AC_LIBTOOL_DLOPEN
+
+# AM_GNU_GETTEXT
+
+# Checks for programs.
+AC_PROG_CC
+AC_PROG_CXX
+AC_PROG_YACC
+AC_PROG_RANLIB
+AC_PROG_INSTALL
+AC_PROG_LN_S
+AC_PROG_MAKE_SET
+AC_PROG_LIBTOOL
+
+AM_SANITY_CHECK
+
+# Checks for header files.
+AC_HEADER_DIRENT
+AC_HEADER_STDC
+AC_HEADER_SYS_WAIT
+AC_CHECK_HEADERS([arpa/inet.h fcntl.h langinfo.h locale.h netdb.h netinet/in.h stdlib.h string.h sys/socket.h sys/time.h syslog.h unistd.h])
+
+# Checks for typedefs, structures, and compiler characteristics.
+AC_HEADER_STDBOOL
+AC_C_CONST
+AC_C_INLINE
+AC_TYPE_OFF_T
+AC_TYPE_PID_T
+AC_TYPE_SIZE_T
+AC_HEADER_TIME
+AC_STRUCT_TM
+
+# Checks for library functions.
+AC_FUNC_CLOSEDIR_VOID
+AC_FUNC_MALLOC
+AC_FUNC_MKTIME
+AC_FUNC_REALLOC
+AC_FUNC_SELECT_ARGTYPES
+AC_TYPE_SIGNAL
+AC_FUNC_STAT
+AC_CHECK_FUNCS([getcwd gethostbyname inet_ntoa memmove memset mkdir nl_langinfo pow select setenv setlocale socket strdup strerror strtol uname])
+
+AC_ISC_POSIX
+
+AC_PREFIX_DEFAULT("/usr")
+oscd_moduldir="${libdir}/${PACKAGE}"
+AC_SUBST(oscd_moduldir)
+oscd_localedir="${datadir}/locale"
+AC_SUBST(oscd_localedir)
+oscd_modulpref="oscd_"
+AC_SUBST(oscd_modulpref)
+
+LDFLAGS=
+CXXFLAGS="-O2 -DOSC_DEBUG"
+
+# stuff for xml-i18n-tools
+# AC_PROG_INTLTOOL(0.12)
+
+# ALL_LINGUAS="ru uk"
+
+# Проверка библиотечных функций.
+# AC_FUNC_ALLOCA
+
+# Макросы поддержки различных языков
+# AM_GNU_GETTEXT([external])
+
+AC_CONFIG_FILES([Makefile 
+                 src/Makefile
+		 src/po/Makefile
+                 src/moduls/Makefile
+                 src/moduls/arhiv/Makefile
+                 src/moduls/arhiv/base/Makefile src/moduls/arhiv/base/po/Makefile
+                 src/moduls/bd/Makefile
+                 src/moduls/bd/direct_dbf/Makefile src/moduls/bd/direct_dbf/po/Makefile
+                 src/moduls/bd/my_sql/Makefile src/moduls/bd/my_sql/po/Makefile
+		 src/moduls/bd/sqlite/Makefile src/moduls/bd/sqlite/po/Makefile
+		 src/moduls/protocol/Makefile
+                 src/moduls/protocol/http/Makefile src/moduls/protocol/http/po/Makefile
+                 src/moduls/protocol/self/Makefile
+                 src/moduls/special/Makefile
+                 src/moduls/special/test_kernel/Makefile src/moduls/special/test_kernel/po/Makefile
+		 src/moduls/special/func_static/Makefile src/moduls/special/func_static/po/Makefile
+		 src/moduls/special/func_free/Makefile src/moduls/special/func_free/po/Makefile
+                 src/moduls/tcontr/Makefile
+		 src/moduls/tcontr/virtual1/Makefile src/moduls/tcontr/virtual1/po/Makefile
+                 src/moduls/tcontr/sys/Makefile src/moduls/tcontr/sys/po/Makefile
+		 src/moduls/tcontr/virtual/Makefile src/moduls/tcontr/virtual/po/Makefile
+		 src/moduls/tcontr/diamond/Makefile src/moduls/tcontr/diamond/po/Makefile
+                 src/moduls/transport/Makefile
+                 src/moduls/transport/socket/Makefile src/moduls/transport/socket/po/Makefile 
+                 src/moduls/transport/mail/Makefile
+                 src/moduls/ui/Makefile
+                 src/moduls/ui/qtcfg/Makefile src/moduls/ui/qtcfg/po/Makefile
+                 src/moduls/ui/web_cfg/Makefile src/moduls/ui/web_cfg/po/Makefile
+                 src/moduls/ui/web_dbg/Makefile])
+
+AC_OUTPUT
+

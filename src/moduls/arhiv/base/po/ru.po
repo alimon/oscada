@@ -1,0 +1,322 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#: ../base.cpp:60 ../base.cpp:576 ../base.h:76
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: base_arh 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-11-11 11:49+0200\n"
+"PO-Revision-Date: 2004-03-20 18:07+0200\n"
+"Last-Translator: Roman Savochenko <rom_as@fromru.com>\n"
+"Language-Team: <ru@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=koi8-r\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../base.cpp:37
+msgid "base_arh"
+msgstr ""
+
+#: ../base.cpp:38
+msgid "Base archivator"
+msgstr "Базовый архиватор"
+
+#: ../base.cpp:39
+msgid "Archive"
+msgstr "Архив"
+
+#: ../base.cpp:41
+msgid "0.3.0"
+msgstr ""
+
+#: ../base.cpp:42
+msgid "Roman Savochenko"
+msgstr "Роман Савоченко"
+
+#: ../base.cpp:43
+msgid "The Archive module. Allow base functions of message and value arhiving."
+msgstr "Модуль архива. Предоставляет базовые функции архивирования сообщений и значений."
+
+#: ../base.cpp:44
+msgid "GPL"
+msgstr ""
+
+#: ../base.cpp:47
+msgid "C"
+msgstr ""
+
+#: ../base.cpp:80
+msgid "UTF8"
+msgstr ""
+
+#: ../base.cpp:102
+#, c-format
+msgid ""
+"======================= The module <%s:%s> options =======================\n"
+"---------- Parameters of the module section <%s> in config file ----------\n"
+"mess_charset      <name>    charset <name> of the Archive (default UTF8);\n"
+"mess_max_size     <size>    maximum <size> kb of message Archive file (0 - "
+"unlimited default);\n"
+"mess_numb_file    <number>  number of message Archive files (5 - default);\n"
+"mess_time_size    <days>    number days to one message file (7 days - "
+"default);\n"
+"mess_timeout_free <min>     timeout of free message file buffer. Timeout no "
+"access (10 min default);\n"
+"\n"
+msgstr ""
+"========================== Опции модуля <%s:%s> ==========================\n"
+"-------- Параметры модульной секции <%s> в конфигурационном файле --------\n"
+"mess_charset      <имя>     кодировка <имя> архива (обычно UTF8);\n"
+"mess_max_size     <размер>  максимальный <размер> в кб файла архива "
+"сообщений (0 - неограничено);\n"
+"mess_numb_file    <кол.>    максимальное количество файлов архивов сообщений "
+"(обычно 5);\n"
+"mess_time_size    <дней>    количество дней в одном файле сообщений (обычно "
+"7 дней);\n"
+"mess_timeout_free <мин>     время неиспользования файла архива сообщений. "
+"После него буфера архива освобождаются (обычно 10 минут);\n"
+"\n"
+
+#: ../base.cpp:119
+msgid "h"
+msgstr ""
+
+#: ../base.cpp:122 ../base.cpp:212
+msgid "help"
+msgstr ""
+
+#: ../base.cpp:145 ../base.cpp:151 ../base.cpp:157 ../base.cpp:161
+#: ../base.cpp:165 ../base.cpp:212
+msgid "id"
+msgstr ""
+
+#: ../base.cpp:145
+msgid "mess_max_size"
+msgstr ""
+
+#: ../base.cpp:151
+msgid "mess_numb_file"
+msgstr ""
+
+#: ../base.cpp:157
+msgid "mess_time_size"
+msgstr ""
+
+#: ../base.cpp:161
+msgid "mess_charset"
+msgstr ""
+
+#: ../base.cpp:165
+msgid "mess_timeout_free"
+msgstr ""
+
+#: ../base.cpp:184
+msgid "dscr"
+msgstr ""
+
+#: ../base.cpp:188
+msgid ""
+"<area id='bs'> <area id='opt' acs='0440'>  <fld id='a_ch' acs='0660' "
+"tp='str'/>  <fld id='a_sz' acs='0660' tp='dec'/>  <fld id='a_fl' acs='0660' "
+"tp='dec'/>  <fld id='a_len' acs='0660' tp='dec'/>  <fld id='a_tm' acs='0660' "
+"tp='dec'/> </area></area>"
+msgstr ""
+
+#: ../base.cpp:202
+msgid "The message Archive options"
+msgstr "Опции архива сообщений"
+
+#: ../base.cpp:203
+msgid "Internal Archive charset"
+msgstr "Внутренняя кодировка архива"
+
+#: ../base.cpp:204
+msgid "Maximum Archive size(byte)"
+msgstr "Максимальный размер архива(байт)"
+
+#: ../base.cpp:205
+msgid "Maximum Archive files"
+msgstr "Максимальное количество файлов архива"
+
+#: ../base.cpp:206
+msgid "Maximum Archive length time(days)"
+msgstr "Максимальный промижуток времени архива(дней)"
+
+#: ../base.cpp:207
+msgid "Timeout freeing buffer of no used Archives(min)"
+msgstr "Таймаут освобождения буферов архивов"
+
+#: ../base.cpp:210
+msgid "<fld id='g_help' acs='0440' tp='str' cols='90' rows='5'/>"
+msgstr ""
+
+#: ../base.cpp:214
+msgid "Options help"
+msgstr ""
+
+#: ../base.cpp:219 ../base.cpp:230
+msgid "/bs/opt/a_ch"
+msgstr ""
+
+#: ../base.cpp:220 ../base.cpp:231
+msgid "/bs/opt/a_sz"
+msgstr ""
+
+#: ../base.cpp:221 ../base.cpp:232
+msgid "/bs/opt/a_fl"
+msgstr ""
+
+#: ../base.cpp:222 ../base.cpp:233
+msgid "/bs/opt/a_len"
+msgstr ""
+
+#: ../base.cpp:223 ../base.cpp:234
+msgid "/bs/opt/a_tm"
+msgstr ""
+
+#: ../base.cpp:224
+msgid "/help/g_help"
+msgstr ""
+
+#: ../base.cpp:256
+#, c-format
+msgid "(%s) Archive %s already started!"
+msgstr ""
+
+#: ../base.cpp:263
+msgid ": Task of message arhiv "
+msgstr ""
+
+#: ../base.cpp:263
+msgid " is starting...."
+msgstr ""
+
+#: ../base.cpp:264
+#, c-format
+msgid "(%s) Archive <%s> no started!"
+msgstr ""
+
+#: ../base.cpp:269
+#, c-format
+msgid "(%s) Archive %s already stoped!"
+msgstr ""
+
+#: ../base.cpp:271
+msgid ": Thread is stoping...."
+msgstr ""
+
+#: ../base.cpp:283
+msgid "DEBUG"
+msgstr ""
+
+#: ../base.cpp:283
+#, c-format
+msgid "%s:Thread <%d>!"
+msgstr ""
+
+#: ../base.cpp:298 ../base.cpp:306 ../base.cpp:347 ../base.cpp:504
+#: ../base.cpp:510
+msgid "SYS"
+msgstr ""
+
+#: ../base.cpp:298 ../base.cpp:306 ../base.cpp:510
+#, c-format
+msgid "%s:%s"
+msgstr ""
+
+#: ../base.cpp:316 ../base.cpp:361
+#, c-format
+msgid "(%s) No started!"
+msgstr ""
+
+#: ../base.cpp:337
+msgid ".msg"
+msgstr ""
+
+#: ../base.cpp:347
+#, c-format
+msgid "%s:Error create new Archive file <%s>!"
+msgstr ""
+
+#: ../base.cpp:383
+#, c-format
+msgid "Can not open or create dir %s!"
+msgstr ""
+
+#: ../base.cpp:394
+msgid ".."
+msgstr ""
+
+#: ../base.cpp:394
+msgid "."
+msgstr ""
+
+#: ../base.cpp:395
+msgid "/"
+msgstr ""
+
+#: ../base.cpp:453
+#, c-format
+msgid "%s: Can not create file: %s!"
+msgstr ""
+
+#: ../base.cpp:457
+msgid "Version"
+msgstr ""
+
+#: ../base.cpp:458 ../base.cpp:467 ../base.cpp:518
+msgid "Charset"
+msgstr ""
+
+#: ../base.cpp:459 ../base.cpp:461 ../base.cpp:547
+#, c-format
+msgid "%X"
+msgstr ""
+
+#: ../base.cpp:460 ../base.cpp:519
+msgid "Begin"
+msgstr ""
+
+#: ../base.cpp:462 ../base.cpp:520
+msgid "End"
+msgstr ""
+
+#: ../base.cpp:504
+#, c-format
+msgid "%s:No my Archive file: %s"
+msgstr ""
+
+#: ../base.cpp:529 ../base.cpp:559
+#, c-format
+msgid "%s: Put message to error Archive file!"
+msgstr ""
+
+#: ../base.cpp:534 ../base.cpp:564
+#, c-format
+msgid "%s: Archive file isn't attaching!"
+msgstr ""
+
+#: ../base.cpp:542 ../base.cpp:548 ../base.cpp:572
+msgid "tm"
+msgstr ""
+
+#: ../base.cpp:546
+msgid "m"
+msgstr ""
+
+#: ../base.cpp:549
+#, c-format
+msgid "%d"
+msgstr ""
+
+#: ../base.cpp:550 ../base.cpp:574
+msgid "lv"
+msgstr ""
+
+#: ../base.cpp:551 ../base.cpp:573
+msgid "cat"
+msgstr ""

@@ -1,0 +1,924 @@
+2005-08-03
+- /Controller/diamond: Add translate to Russian and Ukranian languages.
+- !!!!: /System: Separate element type and flags into TFld. Update TConfig,
+TValue, all system and modules.
+- /System: Separate functions TConfig::getS(), ... ,TConfig::getB() to
+functions for direct(getSd()) and universal(getS()) access.
+- /System: Make universal access for functions TValFunc::getS() ... TValFunc::getI().
+- /System: Add makroses vmin() and vmax().
+- /System: Make universal access for functions TValue::getS() ... TValue::getI().
+- !!!!: /Spec/FreeFunc: Full rebuild compiler and VM. Make support of four
+data types: bool,int,real,string. Add buildin functions. Delete generic access to
+local variables.
+- /Spec/FreeFunc: Update Russian and Ukranian translate.
+- /Controller/virtual: Add translate to Russian and Ukranian languages.
+- /UI/QTCfg: Add checking atribute "descr" to a size for the changing structure page detect.
+
+2005-07-14
+- !!!!: AutoHD: Make no dependent from TContrNode. To AutoHD can connect to every
+object with functions: connect() and disConnect().
+- All: Update include calls from *.h files.
+- TSYS: Move the string proces function from TContrNode to TSYS.
+- UI: WebCfg: Use the string proces function.
+- UI: QTCfg: Use the string proces function.
+- UI: QTCfg: Fix the listbox no select element trap.
+- Spec: StatFunc: Add Russian and Ukranian translates.
+- Spec: FreeFunc: Add Russian and Ukranian translates.
+
+2005-07-07
+- !!!!: Special: FreeFunc: Make interpreter based at Byson syntax creator.
+- Special: FreeFunc: Add library "tech_app".
+- !!!!: Special: FuncStatic: Add "math" library.
+- UI: QTCfg: Make autocreating qtcfg.moc.
+- UI: QTCfg: Return to using of QCheckTableItem from QTable. No cheking was for
+theme Aloy!
+- UI: QTCfg: Fix index list using for the command checkbox.
+- UI: QTCfg: To extend list command for index list.
+- UI: WebCfg: To extend list command for index list.
+- !!!!: Replace functions checkCommandLine() and updateOpt() at load() everywhere.
+- !!!!: TKernel: Add function load() and start() instead run().
+- !!!!: TKernel: Rename subsystem's names.
+- !!!!: TGrpModule and childs: Replace function gmdInit() to gmdLoad().
+- TGrpModule: Add function gmdStart() and gmdStop().
+- !!!!: TMessage: Rename to TMess.
+- !!!!: TMess: Set message level to union Type.
+- !!!!: TMess: Add function load().
+- TFuctionS, TLibFunc, TFunction: add function start() and state started.
+- TModSchedul: Redisined API. Add function loadLibS(), load(), loadAll(),
+startAll(), stopAll() and schedStop().
+- TModule: Add function modStart(), modStop().
+- TSequrity: Replace init() to load().
+- TSYS: make periodic calc CPU frquency (for notebooks) and put to Control
+lang.
+- DB: MySQL: Set field type "text" for strings with length > 200.
+- DOC: Add doc "Programming area of OpenSCADA"
+
+2005-06-09
+- Delete the individual modules path. Use single path.
+- !!!!: Make generic data access for several subsystems.
+- Control: Fix path to list element.
+- !!!!: Control: Make new API for operated to list elements.
+- !!!!: Control: Add operated API for table elements.
+- Control: Set default access timeout to 2sek.
+- Control: Delete the valid check from "set*" and "*get" functions.
+- Control: Add the empty check for new children - chldAdd().
+- Modules: Separate modules name to 'id' and 'name'.
+- BDS: Fix TBDS::open() for close DB if open table error.
+- BDS: Add the control for opened tables.
+- Functions: Use indes-list.
+- Functions: Add functions ioSize(), ioIns(), ioDel(), ioMove().
+- Functions: Add TLibFunc::avoid().
+- Functions: Move IO from TFunction.
+- Functions: Change IO tables view.
+- !!!!: Functions: Separate IO type to type and mode.
+- GrpModule: Delete gmdModPath().
+- SYS: Add TZ(). System timer clock.
+- BD::SQLite: Set exception catcher into destructor.
+- Protocol::http: Adapted to XHTML1.0.
+- !!!!: Special::FreeFunc: Make library, function and IO without interpretation.
+- Special::TestKernel: Add The function subsystem test.
+- Controller::diamond: Add DIO support.
+- Controller::system: Add OpenSCADA use CPU control.
+- UI::QTCfg: Add full support of index list.
+- UI::QTCfg: Add the table modification support.
+- UI::QTCfg: Add string field modification controll.
+- UI::QTCfg: Add the QTextBox modification support.
+- UI::QTCfg: Add new API Control "Set" support.
+
+2005-04-18
+- Fix connect user headers to stdout headers. No close stdout, stdin and
+stderr for demon mode!
+- Control: add index-list support;
+- Subsystem: Go to true index-list.
+- TGrpModule: Add subsystem index.
+- !!!!:Control: All move to new API and delete old API support.
+- Contoll: Fix root field make into ctrInsNode().
+- TConfig: Make view no blocked. Only stat flag!
+- TConfig: Rename change() to cfgChange()
+- TParamContr: Add "Enable" parameter state.
+- TVal: Fix call function vlSet() from setR().
+- TContr::SYS: Add "Enable" mode support.
+- !!!!: Add controller type "Diamond" to repository.
+- UI: WebCfg: Add index-list support.
+- UI: QtCfg: Add index-list support.
+- UI: Fix exception trap.
+
+2005-04-03 
+- Spec: Change requires
+- Spec: Add init.d script and PreReq: chkconfig
+- Spec: Add post and preun scripts for init.d
+- Spec: Change config directory operation
+- Move config file from doc/oscada.xml to oscada.xml
+- Add init script to repository. File oscada.init
+- SYS: Add demon load mode.
+- Archives, Transports: Go to new control API.
+- DB: Make no terminated mode for TBDS::open() and TBDS::close().
+- DB: Add function TBDS::dataSeek() for generic access to data (first DB ->
+second config file)
+- TCntrNode: Make true access to Controll nodes. Fix function cntrCmd()
+- !!!!: Change to lower-size metod access for more function. Use <char *> instead <string> type parameters.
+- TKernel, TGrpModule, TModule, TSYS: Add function cfgNodeName(). Use for make path to Object
+node into config file.
+- TMessage, TSYS: Fix no checking of a return value function getenv();
+- TKernel: Move atributes of the default DB to private section;
+- !!!!: Go to using default DB from all subsystems.
+- XMLNode: Add function attr_() for space saving.
+- UI:QTCfg: Add signal handler for pressing at the navigation tree. 
+
+2005-03-18
+- TContrNode: Add new Info API internal cntrCmd_() instaed ctrStat_(). New API
+allow request internal branches.
+- TArhives: Go to new Controll API.
+- TSYS: Add the Config file seek function.
+- TTransportS: Use the config file seek function if DB no avoid.
+- XML::attr: Delete parameter 'add'. Now, always add atributes.
+
+2005-03-17
+- Add Generic BD support. Add option to TKernel and adapted all subsystems.
+- TSYS: Add function strSepParse for safe parsing a patern parameters
+(prm1:prm2:prm3). Adapted all subsystems.
+- UI::WebCfg: Fix table's parsing.
+
+2005-03-16
+- Add default config file doc/oscada.xml for install to /etc/oscada.xml
+- Rename test/oscada.xml to test/oscada_test.xml
+- Delete cfg/alg.cfg
+- Delete default station name and make load first avoid station config if not
+found wanting.
+- Add athena build to specfile.
+
+2005-03-08
+- DB: Fix close DBs and tables;
+
+2005-03-05
+- !!!!: Integrate TContr and THD to TContrNode. Make tree resource controll and full
+rebuild.
+- TContrNode: Add simple prefix support for branche's names;
+- TContrNode: Add summary client command function TContrNode::cntrCmd_(). To use
+instead function ctrDinGet_() and ctrDinSet_().
+- !!!!: TContrNode: Add generic function TContrNode::cntrCmd() for simple access to
+controll tree.
+- TContrNode: Move self-parse function of TConfig and TValue to them.
+- UI::QTCfg: Use generic control function TContrNode::cntrCmd().
+- UI::QTCfg: Make noredraw update of equal structure's pages.
+- UI::QTCfg: Add Quit menu item.
+- UI::WebCfg: Use generic control function TContrNode::cntrCmd().
+- UI::WebCfg: Add JavaScript based messages support;
+- UI::WebCfg: Add session class.
+- !!!!: Add virtual block controller: Controll::virtual;
+- Move clean DB operations to self-object functions: TContrNode::postDisable;
+- BD: Replace TTable::fieldList() to TTable::fieldSeek();
+- BD: Fix composite keys support.
+- !!!!: BD::MySQL - full rebuild (into SQLite style)
+- BD::MySQL - Disable sequence controll. MySQL nosupport misc ADD and AFTER
+into ALTER requests!
+- BD::SQLite - Move transaction function operators: "BEGIN" and "COMMIT" to DB
+open and close.
+- BD: Close DBs and tables if it no used.
+- Controller: full fix start/stop/enable/disable controller's procedure;
+- !!!!: Add function's subsystem.
+- !!!!: Add the static functions libraries modul. Include the Complex1 compatibility functions.
+- !!!!: Add the free functions libraries modul.
+- Main: Add try->catch block.
+- Main: Change kernel scaning to node-count method.
+- GroupModule: Make gmdDel() to novirtual and delete everywhere. Walk to
+TContrNode::pre[post]Disable().
+- TError: Use makro __func__ for identify error points.
+- SYS: Set LC_NUMERIC=C locale for correct float to string and back converting.
+- SYS: Use environment: LANGUAGE, LANG and LC_MESSAGES for full language controll.
+- SYS: Add short time dimension functions: sysClk() and shrtCnt().
+- TModSchedul: Change Module's links storing.
+- TModule: Change acces to export finctions. Change function modGetFunc() and
+modFreeFunc() to modFunc().
+- TModule: Add register function modFuncReg();
+- XML: Add copying operator: operator=();
+- And more small changes! 
+
+2004-12-11
+- BD::sqlite Relised 0.9.0 version
+
+2004-12-07
+- !!!!: add sqlite BD-module;
+- TModschedul: remove Path converting;
+- Archive::Base: remove Path converting;
+- Special::TestKernel: add The modify table structure test for DB-test;
+
+2004-11-11 OpenSCADA 0.3.1 (Bug fix)
+- fix UI::QTCfg for qt-3.1.1.
+- fix UI::QTCfg form widgets display.
+- fix Transport::socket Pthread flow memory bug. Use PTHREAD_CREATE_DETACHED metod!!!
+- fix TConfig, TCfg - no return object from operator=()!
+- fix TContr::SYS length of atribute "seconds full" for uptime more than 5 symbols. 
+- add ru and uk localization:
+    - BD::direct_dbf;
+    - BD::my_sql;
+    - Special::test_kernel;    
+- add doc for modules
+    - Protocol::http;
+    - Special::test_kernel;
+    - Controller::sys;
+    - Transport::socket;
+    - UI::web_cfg;
+    - UI::QTCfg;
+
+2004-11-03 OpenSCADA 0.3.0 
+- !!!!: Release modules:
+	ui_qtcfg 0.9.0; 
+	ui_web_cfg 1.1.0; 
+	bd_my_sql 1.0.0; 
+	bd_direct_dbf 1.5.0;
+	spec_test_kernel 1.0.0;
+	arh_base 0.3.0;
+	prot_http 1.1.0;
+	cntr_sys 0.6.0;
+	cntr_virt1 0.0.15;
+	tr_socket 1.1.0;
+- !!!!: Anywhere fix public functions name (to Java style).
+- !!!!: BD: Change module API for access to table!
+- !!!!: BD: Add full support MySQL BD to bd_my_sql module!
+- !!!!: UI: Add QT based configurator!
+- !!!!: Add documents: release_0.3.0.sxw, roadmap.sxw, task_history.sxw, to_do.sxw
+- !!!!: Add documents from modules: Archive::base_arh, BD::direct_dbf, BD::my_sql
+- !!!!: Full update generic document: <OpenScadaUMLdescr.sxw>
+- !!!!: Delete modules: <spec_test_bd> and <spec_test_transp>
+- !!!!: spec_test_kernel: add tests: bd and transports. Make multitest support!
+- !!!!: Add <AutoHD> anywhere!
+- !!!!: TConfig: Delete multi-fields support and make it to generic structure for tabes!
+- Delete Table: <transport.dbf> and <arhive.dbf>
+- Add Table: <transp_in.dbf> and <transp_out.dbf>
+- Add diagram: <controll_tree.dia>
+- UI::qtcfg: Add files: dlguser.cpp, dlguser.h for user dialog!
+- UI::qtcfg: Delete file: qtcfg.ui!
+- UI::qtcfg: Add images to repository!
+- UI::qtcfg: Fix go childs method!
+- Remove from repository all *.pot files!
+- TFld&TElem: Change method create/load new fields!
+- TMessage: rename and replace structure SBufRec to TMessage::SRec;
+- TContr: Change Table support. Delete internal commands!
+- TContr: Delete function <ctr_cmd_go>. And comands move to function <ctrDinSet_>!
+- TConfig: Add flag F_KEY for marked BD key element!
+- THD: fix no releasing resources in the time waiting of free resources!
+- THD: Add function for check avoid of object: <objAvoid()>;
+- TMessage: Put messages to bufer always!
+- Update TContr XML language content for all subsystems!
+- Add of deleting The Table fields if deleted Element!
+- TTipController: Clean odd function!
+- TTransports: Separated input and output transports!
+- XMLNode: Delete new_xml() and public clean() function!
+
+2004-10-07
+- UI:qtcfg: Relised 0.5.0 version
+- !!!!: Fix name error Arhive to Archive, anywhere.
+- !!!!: BD: Full change access mode to "AutoHD<>" mode use.
+- !!!!: Controller: Full change  access mode to "AutoHD<>" mode use.
+- !!!!: Parameter: Full change access mode to "AutoHD<>" mode use.
+- !!!!: BD: Fix public functions name (to Java style).
+- !!!!: Controller: Fix public functions name (to Java style).
+- !!!!: GRPModule: Fix public functions name (to Java style).
+- !!!!: Module: Fix public functions name (to Java style).
+- !!!!: Archive: Fix public functions name (to Java style).
+- TTable: Add owner to object.
+- TContr: Add pathCode() and pathEncode() functions.
+- TContr: Add "encode" option to ctr_path_l().
+- TContr: Add "pos" option to ctr_cfg_parse(), ctr_val_parse() and ctr_fld_parse().
+- THD: Add obj_avoid() for the avoid control.
+- TModule: Separate module "name" to "id" and "name".
+- Controller::virtual1: Add document directory and static diagram.
+- UI::qt_gui: Add document directory and "TZ" for Presentations Environment.
+
+2004-09-09
+- Move the Control tree into ctr_fill_info() for all;
+- Update the option help for all;
+- Made full path check into controll functions ctr_din_get(), ctr_din_set() ....
+- TContr: change list prefix from "sel:" to "sel_"
+- Add exception to last Control functions ctr_din_get(), ctr_din_set() ....
+- Fix Controll chains for all;
+- TMessage: change prototip functions: Sconv(), SConvIn(), SConvOut();
+- XML: add clean_childs() function and fix destructor!
+- Protocol::http: Go to XHTML1.0 standart!
+- Controller::virtual_v1: Experemental add TFrm;
+- !!!!: Add UI::QTCfg modul!
+- !!!!: Del UI::QTGUI modul!
+
+2004-07-25 OpenScada 0.2.6
+- UI::web_cfg: Fix The fiel type "time";
+- Archive::base_arh: Fix a parameter type for The function get();
+- Module: Change the parameters type for The function attach();
+
+2004-07-24 OpenScada 0.2.5 (socket 1.0.0; http 1.0.0; direct_dbf 1.0.0; web_cfg 1.0.0; SysContr 0.5.0; )
+- Released
+
+2004-07-23
+- !!!!: Add auto release to THD: AutoHD;
+- Replace <string> call parameters to <& string> for fast and size;
+- TContr: Change attach metod to metod with AutoHD;
+- TArchiveS: delete the bridge attach functions;
+- TTransportS: delete the bridge attach functions;
+- TValue: Add AutoHD resources for access to atribute;
+- THD: Add function hd_hd() and hd_obj();
+- Update Test BD;
+
+2004-07-13
+- Add Copyright to all source files;
+- TCfg: Add and check of visible a config element;
+- TValue: Add modifily of TValue;
+- TParamContr: Fix no return value if attribut no avoid;
+
+2004-07-12
+- Admin: Delete clean_tree. For clean tree use <make distclean>;
+- !!!!: Add localisation to the controller SYS;
+- !!!!: TArchives: Made separe BD for the value and message Archives;
+- !!!!: Merge TConfigElem and TValueElem to TElem;
+- !!!!: Add TVal for TValue container;
+- !!!!: Add TCfg for TConfig container;
+- TContr: Made direct init the XMLNode value;
+- TContr: Add value parser;
+- TContr: Add write mode controll;
+- Change enable and start mode manipulation:
+  - TController;
+  - TParamContr;
+  - TTransportS;
+  - TUIS;
+- TSpecialS: Make private acces to Tvalue;
+- !!!!: TSYS: Make ResAlloc and apply autofreeing mode for resources (for
+- TSYS: Sygnal handling moved to constructor.
+- !!!!: TValue: fullish remake;
+- BD::direct_dbg: Fix long size for x86_64;
+- Special::test_kernel: Add value test;
+- Controller::virtual_v1: Fix value;
+- Controller::sys: Add: CPU, Mem, HDDTemp, LmSensors;
+- Transport::socket: update output transport;
+- UI::web_cfg: Add checking of change The group element after press "Apply"
+
+
+2004-05-11  OpenScada 0.2.1
+- The kernel libs build were updated, and The kernel version was added.
+- Necesarely static part was deleted from TContr.
+
+
+2004-04-11  OpenScada 0.2.0
+- !!!!:AUTOMAKE: make better integration:
+  - set default prefix to /usr;
+  - define locale dir: oscd_localedir;
+  - add modul prefix;
+  - move modules to self directories;
+  - add a self modules po directory;
+  - make po/Makefile.am for kernel and modules
+  - add EXTRA_DIST everywhere;
+- !!!!:RPM: full update OpenScada.spec:
+  - make 3 packets: OpenScada, OpenScada-devel, OpenScada-testdata;
+  - add languages: ru, uk
+  - make packages from 'make -dist' package;
+- !!!!:Delete bin directory;
+- !!!!:Add test directory;
+- TConfigElem: From struct delete field view and add types: DEC, OCT, HEX
+- I18N: Make for: ALL!  
+- TArchives: make firs start Archives and second Get message counter.
+- TArchives: add quit attribute for do make last get message cycle before quit.
+- HELP: Go to standart structure describe of options descriptions.
+- TContr: Add access symbol ',' for real type.
+- TContr: Add interim function ctr_cmd_go.
+- TContr: Add function for TConfig support: ctr_cfg_parse, ctr_cfg_get, ctr_cfg_set
+- !!!:TController*: Full rebuild controll scheme!
+- THD: Esceptions messages fix.
+- TMessage: add functions: lang.
+- TModule: add translate functions for modules: I18N, I18Ns
+- XMLNode: add exception to function get_child.
+  
+
+2004-03-17  OpenScada 0.1.17 (prot_http.so 0.6.0; tr_socket.so 0.6.0; ui_web_cfg.so 0.6.0; arh_base 0.1.0 )
+- Rewrite configure.in and change to Automake 1.7.
+- Replace common compile options to configure.in.
+- Make build static and dinamic executable modul.
+- !!!!:Go TControl to 
+  - TArchiveS
+  - TKernel
+  - TMessage
+  - TModule
+  - TProtocolS
+  - TSequrity
+  - TSYS
+  - TTransportS
+  - TUIS
+  - Archive::base
+  - Protocol::http
+  - Transport::socket
+  - UI::QT_GUI
+  - UI::web_cfg
+- Change misc params names into config file to standart name "prm".
+- !!!!:TArchiveS: Change BD work metod.
+- TArchiveS: Add start and stop commands to Message Archives.
+- TArchiveS: Fix time check and add level sort into MessArhTask.
+- TArchiveS: Change metod of bd parameters stored.
+- TTable: Add function Clean().
+- TConfig: Add integer, real and boolen functions returned pointer (for fast access)
+- TConfig: Fix trap with negative parameters into cf_SaveValBD;
+- TContr: Into ctr_id make field path processing.
+- TContr: Into chk_opt_val add checking file and directory avoid.
+- TContr: Del buffers using.
+- TContr: Add path parameter to ctr_det() and ctr_at() functions.
+- TGRPModule: Add exceptions to branch functions.
+- THD: Fix no freeing resource into obj_add()
+- TSequrity: add subsystems functions.
+- TSequrity: Full made.
+- TSequrity: Add sequrity table: sequrity.dbf.
+- TSYS: add static function int2str() and real2str() for central converting values to string.
+- !!!!:TTransportS: Change BD work metod.
+- TTransportS: Add start and stop commands to transports.
+- TTransportS: Change metod of bd parameters stored.
+- XML: Add new get_child for access throw id name of node.
+- BD::direct_dbf: Fix resource blocking into AddColum().
+- Protocol::http: Fix fragmentation request processing (Konqueror specific).
+- Transport::socket: Add start() and stop() commands
+- UI::web_cfg: Add about page, head all info pages, navigation field, user
+    stat field and more other changes. 
+- DOC: Litle changes.
+
+
+2004-03-04  OpenScada 0.1.16 (prot_http.so 0.5.0; tr_socket.so 0.5.0; ui_web_cfg.so 0.5.0)
+- Add "s_name" for store The humanly modules subsystem name
+  - TGRPModule
+  - TModSchedul
+  - TParamS
+  - TSequrity
+- !!!!: Make change per language specification to
+  - !!!!:UI::web_cfg 
+  - TContr
+  - TGRPModule
+  - TKernel
+  - TModSchedul
+  - TModule
+  - TParamS
+  - TSequrity
+  - TSYS
+- !!!!:DOC: Make cotrol language specification 
+- TKernel: add checking stat controller (no second run)
+- Change comandline help function <pr_opt_descr> to <opt_descr> for:
+  - TKernel
+  - TMessage
+  - TSYS
+- TMessage: delete prefix "*:" from messages. Station prefix must add TArchive
+- TProtocols: Change return value function <mess>! (For support brackes and no full messages)
+- Protocol::http: make support brackes and no full messages;
+- Protocol::http: repair check message content and variables;
+- Transport::socket: set default input buffer to 1k;
+- Transport::socket: make support brackes and no full messages;
+- !!!!:UI::web_info: deleted; 
+
+2004-02-18  OpenScada 0.1.15 (prot_http.so 0.3.0; tr_socket.so 0.3.0; ui_web_cfg.so 0.3.0)
+- !!!!:NEW: Add sequrity subsystems. Objects: TSequrity, TUser, TGroup - tsequrity.cpp(h)
+- !!!!:NEW: Make new message system for direct point message from!
+- TMessage: Set default debug level to 0;
+- TMessage: Add function put_s;
+- !!!!:TMessage: Add and use direct message functions: m_put, m_put_s to:
+  - tgrpmodule.cpp(h)
+  - tArchives.cpp(h)
+  - tcontrollers.cpp(h) 
+  - tcontroller.cpp(h) 
+  - tkernel.cpp(h)
+  - tmodshedule.cpp(h)
+  - tmodule.cpp(h)
+  - tsys.cpp(h)
+  - transports.cpp(h)
+  - Special::test_bd;
+  - Special::test_kernel;
+  - Special::test_transp;
+  - Controller::virtual_v1;
+  - Transport::socket;
+- TContr: add functions:
+  - ctr_id( XMLNode &inf, string name_id );
+  - chk_opt_val( XMLNode *fld, bool fix );  
+  - ctr_din_set( XMLNode *fld);
+  - ctr_din_get( XMLNode *fld);
+- TContr: delete: 
+  - ctr_opts_apply;
+  - ctr_br_add;
+  - ctr_br_del;
+  - ctr_br_rot;
+- TContr: rename:
+  - ctr_opt to "ctr_opt( XMLNode *inf, unsigned numb)";
+  - ctr_opt_getS to "string ctr_opt_getS(XMLNode *fld)";
+  - ctr_opt_getI to "int ctr_opt_getI(XMLNode *fld)";
+  - ctr_opt_getR to "double ctr_opt_getR(XMLNode *fld)";
+  - ctr_opt_getB to "bool ctr_opt_getB(XMLNode *fld)";
+  - ctr_opt_getB to "bool ctr_opt_getB(XMLNode *fld)";
+  - ctr_opt_setS to "ctr_opt_setS(XMLNode *fld, string val)";
+  - ctr_opt_setI to "ctr_opt_setI(XMLNode *fld, int val)";
+  - ctr_opt_setR to "ctr_opt_setR(XMLNode *fld, double val)";
+  - ctr_opt_setB to "ctr_opt_setB(XMLNode *fld, bool val)";
+  - ctr_br_putlist to "ctr_br_putlist(XMLNode *fld, vector string<list>);
+  - ctr_cmd_go to "ctr_cmd_go(XMLNode *fld)";
+  - ctr_att to "unsigned ctr_att( XMLNode *br );
+  - ctr_at to "TContr &ctr_at( XMLNode *br );
+- TGRPModule: replace function ctr_opts_apply to ctr_din_get;
+- TKernel: replace function ctr_opts_apply to ctr_din_get;
+- TModSchedul: use static access to resources;
+- TModSchedul: delete ctr_opts_apply;
+- TModule: replace function ctr_opts_apply to ctr_din_get;
+- TProtocols: add parameter sender into function mess;
+- TSYS: replace function ctr_opts_apply to ctr_din_get;
+- TSYS: add function ctr_cmd_go;
+- TSYS: change size temporary buffers to 2024;
+- XML: add function del_child;
+- Protocol::http: add parameter sender into function mess;
+- Protocol::http: add values parsing and contein evolve;
+- Protocol::http: add POST metod support;
+- Protocol::http: update index page;
+- Protocol::self: add parameter sender into function mess;
+- Transport::socket: add parameter sender into function PutMess for support TProtocol::mess;
+- Transport::socket: change parameter of ClSock from 'int sock' to 'SSock &s_in';
+- Transport::socket: add field sender into struct SSockIn;
+- !!!!:UI::web_cfg: make base user config interface with support: sequrity, 
+    view value, command branch, change value, put command and jump to next branch;
+- UI::web_dbg: add export function HttpPost; 
+- UI::web_dbg: add parameter sender into function HttpGet;
+- UI::web_info: add export function HttpPost; 
+- UI::web_info: add parameter sender into function HttpGet;
+- UI::web_info: update html generator;
+- DOC: update static class diagram and add Control language description;
+
+2004-02-05  OpenScada 0.1.12 (prot_http.so 0.1.0; ui_web_info.so 0.1.0)
+- TBDS: add function delete tables del();
+- TContr: add atribute "o_name";
+- TContr: make check "fld" nodes to ctr_opt_get and ctr_opt_set;
+- TContr: change brance name store from Node->text to Node->attr("id");
+- TContr: delete inf from ctr_opt_apply();
+- TContr: add apply flag into functions: ctr_opt_get*();
+- integrate to standart control (TContr) for:
+  - tgrpmodule.cpp(h)
+  - tkernel.cpp(h)
+  - tmodschedul.cpp(h)
+  - tmodule.cpp(h)
+  - tparams.cpp(h)
+- TMessage: move function setlocale(LC_ALL) from TSYS to TMessage;
+- TMessage: add resource to message buffer manipulations;
+- TMessage: rename function: SetDLevel->d_level; SetLogDir->log_direct; SetCharset->charset
+- TMessage: add function mess_buf_len (for set and get size of inernal message buffer)
+- TProtocolS: rebuild protocol arhitecture. Make individual transport mode for input protocols (scheme Open,Close,At).
+- TSYS: add TMessage option into TControl;
+- TSYS: make branchs links;
+- Protocol::http: make individual transport mode;
+- Protocol::http: make index page for dysplaing and linking witch web modules;
+- Protocol::self: make individual transport mode;
+- BaseDate::my_sql: fix delete and create table;
+- Transport::socket: add socket header to PutMess for individual transport mode;
+- UI::web_info: make info pages from TControl subsystem of OpenSCADA;
+
+2004-01-28  OpenScada 0.1.11 
+- integrate access header (THD) to:
+  - tsys.cpp(h)
+- NEW: Add object TContr - tcontr.cpp(h)
+- TSYS: make resource functions as static;
+- THD: change access to static resource;
+- THD: add string description for attached user into hd;
+- TParams: add string description option into att;
+- start integrating to standart control (TContr) for:
+  - tsys.cpp(h)
+- Special::test_kernel: add The base controll test;
+- Controller::virtual_v1: add Free to destructor;
+- Controller::virtual_v1: use pointers into vector for decrease module size;
+- Transport::socket: use value STD_WAIT_DELAY for sockets event wait;
+
+2004-01-08  OpenScada 0.1.10 (cntr_virt1.so 0.0.9)
+- THD: add into constructor pointer into children object name;
+- THD: rename function: hd_obj_cnt -> obj_cnt; hd_obj_list -> obj_list; hd_obj_add -> obj_add; hd_obj_del -> obj_del;
+- THD: delete dublicating function: obj(unsigned i_hd);
+- THD: add function obj_rotate() for change trim object into list;
+- TConfig: change type of return value to "&" for fast access for functions: cf_Get_SEL() and cf_Get_S();
+- TController: add UnRegParamS() to Disable();
+- TController: change return parameter for "string &Name()";
+- TController: change prototip function ParamAttach();
+- integrate access header (THD) to:
+  - tcontrollers.cpp(h)
+  - tparams.cpp(h)
+- TKernel: add into destructor stoping and disabling all controllers;
+- TParamContr: change constructor's prototipe;
+- TParamContr: del t_sync atribut;
+- TParamContr: change return type for "string &Name()";
+- !!!!: TParam: full rebuild;
+- TParamS: add owner and o_name atributes;
+- Special::test_kernel: fix cycle time;
+- Special::test_kernel: update access into parameters;
+- Controller::virtual_v2: deleted;
+- !!!!: Controller::virtual_v1: full rebuild;
+- DOC: update roadmap, and modules description;
+
+2003-12-30  OpenScada 0.1.9
+- build: rename OpenScada kernel library to liboscada.la;
+- build: change to default static build
+- build: fix bug 4 (add link options -Wl,-whole-Archive and -z modules
+- tArchives: add copyright title
+- !!!!: global: add version to type modules and make check version;
+- THD: add timeout support into hd_obj_del;
+- TModule: rename field "FileName" to "Source"
+- Archive::base_arh: add copyright title
+- Archive::base_arh: add contol Archives file permission
+- DOC: update doc
+
+2003-12-23  OpenScada 0.1.8
+- Threads: add function pthread_join for wait of pthread clean.
+- TConfig: fix no ANSIC++ standart call function vector::insert();
+- TMessage: fix no ANSIC++ standart call function vector::insert();
+- TValueElem: fix no ANSIC++ standart call function vector::insert();
+- Controller::virtual_v1: fix no ANSIC++ standart call function vector::insert();
+- Controller::virtual_v2: fix no ANSIC++ standart call function vector::insert();
+- TController: use object SBDS for store bd address;
+- TController: add call function Stop() and Free() into destructor;
+- TTipController: use SBDS into ContrAttach();
+- BD::my_sql: add define option USE_OLD_FUNCTIONS for use old functions;
+- DOC: make numbering of bugs;
+
+2003-12-16  OpenScada 0.1.7
+- TSYS: add STD_WAIT_DELAY define constant; 
+- TSYS: use STD_WAIT_DELAY into ResDelete(), WResRequest() and Start(); 
+- TSYS: add function "event_wait" for central control for slep wait and fast check go events!
+- event_wait() use into:
+  - TArchives;
+  - TTipBD;
+  - TBD;
+  - TModSchedul;
+  - Archive::base_arh;
+  - Special::test_kernel;
+  - Controller::virtual_v1,virtual_v2;
+  - Transport::socket;
+  - UI::QT_GUI;
+- THD: add hd_obj.free(): stat object for signal about 0 objects (for event_wait() );
+- TArchiveS: made store BD adress into SBDS;
+- TArchiveS: use STD_WAIT_DELAY into MessArhTask();
+- TTable: delete noused: ENTER() and EXIT(); 
+- TController: move ParamAttach() into private section;
+- TControllerS: made store BD adress into SBDS;
+- TKernel: delete dublication calls CheckComandLine() and UpdateOpt() into starting;
+- TModSchedule: use STD_WAIT_DELAY into SchedTask();
+- TParamS: connect into TConfig (but no use, while )!
+- TTransportS: made store BD adress into SBDS;
+- Special::test_kernel: use STD_WAIT_DELAY into SchedTask();
+- Special::test_kernel: add atribut "on" into config tree;
+- Update doc;
+
+2003-12-09  OpenScada 0.1.5 (bd_direct_dbf.so 0.1.2)
+- add standart access header description !!!!! ( add files: thd.cpp, thd.h )
+- integrate access header to:
+  - tArchives.cpp(h)
+  - tbds.cpp(h)
+  - tcontrollers.cpp(h)
+  - tgrpmodule.cpp(h)
+  - ttipcontroller.cpp(h)
+  - ttransports.cpp(h)
+- TTable: change tables call mode. Move resources to modules;
+- TTable: add Name();
+- TTipArchive: rename at_tp() to gmd_at();
+- TBDS: rename at_tp() to gmd_at();
+- TControllerS: rename at_tp() to gmd_at();
+- TProtocolS: rename at_tp() to gmd_at();
+- TTransportS: rename at_tp() to gmd_at();
+- TGRPModule: change element type to string: NameType;
+- TMessage: change parameters type for functions: SconvIn, SconvOut, Sconv
+- TModule: change element type to string: FileName, NameModul, NameType, Vers, Autors, DescrMod, License;
+- TSYS: add config parameters: m_cr_f_per, m_cr_d_perm. ( Set default permition for creating files and directories )
+- bd_direct_dbf: make resource and internal string recoding;
+- spec_test_kernel: add config atribut "t_arh" and rename "Archive" to "arh" for MESS test;
+
+
+2003-11-26  OpenScada 0.1.0 (arh_base.so 0.0.3; spec_test_kernel.so 0.0.4; tr_socket.so 0.1.1)
+- add defines to TSYS.h for fixed buffers len: STR_BUF_LEN;
+- delete using signal SIGALRM for stoped threads. Stoped threads self!
+- change return type of TArchiveS::Mess_at(), TArchiveS::Val_at(), TTipArchive::atMess() to TTipArchive::atVal();
+- add debug printing pthread's pid for start;
+- rename TSYS::GetMess() to TSYS::get();
+- fix bug of buffer overflov into: TError::TError(...), TMessage::put();
+- replace bug method signals handle into TSYS::Start();
+- XMLNode: add functions: ins_child(..);
+- arh_base: fix config's params;
+- arh_base: decrease scan dir frquence to 5 sec;
+- arh_base: change method of create the Archive file names (humanly date view);
+- arh_base: add owner to TFileArh;
+- arh_base: add get() functions;
+- arh_base: allocate resources at function TMessArh::ScanDir();
+- arh_base: add atribut "m_access" for control time access to Archive file and free Archive file memory if long not use;
+- arh_base: add data sort controll to put();
+- arh_base: add support of free memory to Sync();
+- arh_base: delete codepage support functions;
+- spec_test_kernel: add nolimyted wait of task stoped;
+- spec_test_kernel: update MESS test. Add system Archive and select kenel module Archive test.
+- spec_test_transport: add SIGPIPE signal handler ( Broken pipe signals go! )
+- tr_sock: add wite client task stoped to TSocketIn::Task();
+- tr_sock: delete TSocketIn::sighd();
+- tr_sock: add using select to TSocketIn::ClSock();
+- tr_sock: fix error into TSocketIn::UnregClient(). Element first free and second using!!!
+- tr_sock: fix unlimited while cicle into TSocketIn::~TSocketIn();
+- ui_QT_GUI: add unllimited white of closing qt window;
+
+2003-11-26  OpenScada 0.0.9
+- add support message Archives (write mode, read in future);
+  - add OS/bin/Archive and OS/bin/Archive/MESS directory;
+  - add Archives table: OS/bin/DATA/Archive.dbf;
+  - add Archive module base_arh (moduls/arhiv/base.cpp and moduls/arhiv/base.h)
+- add description field to table OS/bin/DATA/generic.dbf and OS/bin/DATA/transport.dbf;
+- Update doc:
+  - add general SCADA description;
+  - add diagram SCADA.dia;
+  - rewiev doc;
+- separate resource to Read and Write resource;
+- add requesting to write resource into ResDelete and add delete mode for generated exception when will go request resource;
+- add structure flags into TSYS resource (SSem);
+- use resources everithing;
+- update of debug info generate:
+  - add debug informations;
+- change metod single used mode for TConfig ( simple for using and stability )
+- change structure used into TConfigElem;
+- replace state identificator into TControllerS, from id_mod to use;
+- add gmd_DelM() into: TControllers, TTransportS, TArchiveS for free deleting module's elements;
+- raise buffer len up 1024b into TKernel ( fixed bufer this bad!! );
+- rebuild modules sheduler:
+  - check and fixed stat all modules into list;
+  - replace list mod_allow and mod_deny to mod_auto. For auto attached and inited modules;
+  - add function for simple attach and detach any avoid modul;
+  - TModSchedule fully rewrited;
+- raise buffer len up 1024b into TMessage ( fixed bufer this bad!! );
+- add level into message buffer of TMessage;
+- TMessage: add function GetCharset();
+- TMessage: add into function GetMess() parameters: category and level;
+- Add to destructor of TModShedule detaching all modules;
+- Add check type config file into TSYS->UpdateOpt();
+- Add intercepting signales SIGALRM and SIGPIPE into TSYS;
+- Add function TSYS->FixName() for convert path name to absolutely view;
+- Fix no cleaned atribute in function XMLNode::cleanup();
+- Fix no loading atributes of root XML node into XMLNode::load_xml();
+- add user mode for genarate XML file (XMLNode::get_xml());
+- add XMLNode::new_xml() for cleaning XMLNode tree;
+- Fix time answer into "self" protocol module;
+- Add hard control to start and stop pthreads;
+- Add cycle testing mode to test_kernel special module;
+- Add Attach/Detach test mode to test_kernel special module;
+- Remain problem int QT_GUI UI module: no stoped pthread!!!!!;
+
+2003-11-12  CVS commit
+- Add a kernel list and functions for kernel manipulating to TSYS;
+- Make TMessage first initing an last destroyed;
+- Move scan change config file to TSYS. Update system for change config file;
+- Move signal handler function to TSYS;
+- Add template description to TArchiveS (To next commit will have maked support Message Archives);
+- Clean n_opt atributes anywhere;
+- Update a message creating methodic (anywhere). Add category parameter for messages.  
+- Add Name() function and atribut name to TKernel;
+- Add Message buffer to TMessage, add a process function for it and add config file options;
+- Add List clean to TValueElem;
+- Fix error mem malloc to TSYS for load config file buffer; (add null end byte)
+- Fix no free parser mem from XML, and set root value directly from load_xml;
+- Add test buffer and modify test Param to test_kernel module;
+- Add a template realised Controller module sys;
+- Update doc;
+
+2003-11-04  CVS commit
+- add support XML to progect (add files xml.cpp and xml.h);
+- change simple text config to XML based config (delete /bin/scada.conf and add /bin/oscada.xml)
+- reserve to XML config multikernel and multistation support;
+- add multikernel to progect;
+- add function XMLCfgNode() to: 
+       TSYS       - "OpenScada" and "station" node (attribute "id" - name station);
+       TKernel    - "kernel" named node (attribut "id" - name kernel);
+       TGRPModule - groupe module "section" nodes (attribut "id" - name groupe modules);
+       TModule    - "module" nodes (attribute "id" - modules name);
+- update config file option;
+- free progect from want gcc option -D_GLIBCPP_DEPRECATED;
+- add message definrs: MESS_DEBUG, MESS_INFO, MESS_NOTICE, MESS_WARNING, MESS_ERR, MESS_CRIT, MESS_ALLERT, MESS_EMERG
+- add commandline option Station;
+- add XML parsing TEST to test_kernel.cpp test module (add option for enable/disable and select parsed file);
+
+
+2003-10-28  CVS commit 
+- rename type modules "GUI" to "UI" (user interface)
+   - object TGUI to TUI;
+   - TKernel element gui to ui;
+   - rename files: tguis.cpp to tuis.cpp and tguis.h to tuis.h;
+- remove info elements: FuncList, FuncPrototip, FuncDescr from TModule::mod_info();
+- add function: mos_ListFunc(), mod_Func() to TModule;
+- add first version OpenScada.spec file (for created RPM);
+- move special modules: web_cfg, web_dbg, web_info to ui type modules;
+- update doc;
+- rename qt_cfg to qt_gui and test updeted;
+
+2003-10-14  CVS commit
+- separate file ttipparam.cpp from ttipcontroller.cpp;
+- change TController stat, create self bit for states mode;
+- anywhere add printing name modul a debug function's;
+- to TGRPModule rename function: gmd_StopAll -> gmd_Stop, gmd_InitAll -> gmd_Init, gmd_StartAll -> gmd_Start
+- from TModule remove function: mod_init, mod_deinit, mod_start, mod_stop
+- to TModule add function mod_connect (connecting to TGRPModule, add first checking commandline and config file)
+- to TGUIS add object TGUI and smal update;
+- add GUI modul qt_cfg.cpp (testing);
+- delete GUI modul test_gui.cpp;
+- from TModSchedul delete test section;
+- from TModule delete stat mode (make cheking to NULL);
+- to TParam and TParamS for function at() change return type to <&>;
+- to TSpecialS add object TSpecial with function Start, Stop;
+- to TValue change return type for vl_Elem() to <&>;
+- change kernel and modules version to type > 0.2.2; 
+- add Special test modules: test_bd, test_kernel, test_transp;
+- update doc;
+
+2003-10-07  CVS commit
+- move deleting modules to TGrpModule (central)!
+- for generality "at" and "operator[]" function change return value to <&> 
+  ( for simple use with operator[] and use <.> )
+- create method Owner() instead public atribute owner;
+- move owner children of TModule to TModule and set owner to TGRPModule;
+- delete gmd_AddM from children of TGRPModule;
+- change BD, Archive ... atributes of TKernel to BD(), Archive() ... function
+- delete checking version of module and delete mod_Version(); 
+- set updete module if change file's date;
+- change system geting and creating modules info with mod_info;
+- add variant function mod_info for geting info elements list;
+- delete TSpecial object (don't need);
+- add Info element SubType to Special module and set WWW subtype for WWW page modules;
+- add checking SubType WWW to http protocols module;
+- add using "namespace" keyword into Controller and Special modules !!!
+- rename modul virtual to virtual1;
+- mirored module virtual1 to virtual2 (to future);
+- update doc;
+
+2003-09-30  CVS commit
+- add script "clean-tree" for auto clean progect tree (prepare to CVS commit)
+- delete virtual function gmd_DelM from children: TBDS, TControllerS, TProtocolS;
+- add support default type and name BD into TTransportS and TControllerS;
+- add replacing operator "[]" to mostly function and test into TModSchedule;
+- rename object TTipProtocol to TProtocol
+- add TSpecial and update TSpecialS;
+- delete export functions from some modules (no used)
+- update http protocol. Separate protocol and web pages. Web pages called HttpGet from TSpecial;
+- delete test_special.cpp
+- add special web modules: web_cfg, web_dbg, web_info;
+- fix bug into transport module socket - no closed handed client's sockets;
+- delete perl test modules;
+- update doc;
+
+2003-09-22  CVS commit
+- delete odd vectors at TBDS, TControllerS, TTransportS;
+- add index operation - [] to TBDS, TControllerS, TTransportS;
+- make TTipController -> TConfigElem parent link;
+- add to TConfig a conecting/unconecting TConfigElem;
+- make TProtocolS;
+- add protocols "self", "http" (basic);
+- connect TransportS and TProtocolS
+- add option proto to TTranspotrtS;
+- add option tr_prot to config file of TTransportS;
+- add mode option to config file for Input socket transport (0 - no hold; 1 - hold connect)
+- change module's version to 0.2 for finished modules;
+- delete test_transport;
+- add mail transport (template);
+- delete test_protocol;
+- add http and self protocols (templates);
+- delete test_tcontr;
+- updete doc;
+
+2003-09-13  CVS commit
+- add prefix "mod" to function of object TModule;
+- add prefix "gmd" to function of object TGRPModule;
+- add prefix "cf" to function of object TConfig;
+- add prefix "cfe" to function of object TConfigElem;
+- add prefix "vl" to function of object TValue;
+- add prefix "vle" to function of object TValueElem;
+- add auto open transport from BD and config file;
+- fix opening mode to TControllerS mix configs to one;
+- add to transport socket support out sockets;
+- mix separated bd elements to onli config option for TControllerS;
+- add table transport.dbf for transport description;
+- fix transport tr_socket.o. UDP already work;
+
+2003-09-09  CVS commit
+- move all system function from TKernel to TSYS
+- delete arguments from function CheckCommandLine;
+- add to function GetOpt: value level and select exception work;
+- move some command line, config file option and function from TKernel to TMessage and TSYS;
+- add test support TCP,UDP,UNIX sockets (input) into transport modules socket.so;
+
+2003-09-02  CVS commit
+- add system object TSYS;
+- add resource function to TSYS;
+- add resource to TBDS;
+- add resource to TTransports;
+- add object TTipParam;
+- attach object TTipParam to TParmContr;
+- misc type params into TController in one massive;
+- update sckelet of TTransport;
+- fix TController commands: Start(), Stop() 
+- fix error into module virtual.cpp and kernel: check and use locale/globale params;
+- create object TVirtAlgb into module virtual.cpp for separate loading and manipulated
+  whith modul's config file;
+- TControllers: change mode of free into destructor: firs - stoped; second - free!
+- add processing of a exception into a start and a stop controller commands;
+- delete stats of modules;
+- add checking name and version OS;
+- update documents;
+
+2003-08-26  CVS commit
+- Start changelog file!
+- fix destructor ~TGRPModule and into childs;
+- fix pr_opr_descr anywhere;
+- change sheme of connect modules;
+- delete function: TModule->Connect and other
+- update transport connection arhitecture: ttransports.h
+- many update DOCS;
+- delete odd files without CVS repository
+
