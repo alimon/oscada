@@ -274,6 +274,12 @@ AX_MOD_DAQ_EN(Fastwel, [enable compilation module DAQ.Fastwel], enable)
 AX_MOD_DAQ_EN(FT3, [enable compilation module DAQ.FT3], enable)
 AX_MOD_DAQ_EN(GPIO, [enable compilation module DAQ.GPIO], enable)
 
+AX_MOD_DAQ_EN(EtherNetIP, [disable compilation module DAQ.EtherNetIP], disable, [], [
+    AC_CHECK_HEADERS([libplctag.h], [],
+	AC_MSG_ERROR([DAQ.EtherNetIP: Some libplctag headers aren't found. Install or check the libplctag development package!]))
+	AC_CHECK_LIB(plctag, initialize_modules, [], AC_MSG_ERROR([The plctag library isn't found. Install or check the plctag library package!]))
+])
+
 # Archive modules
 AX_MOD_Archive_EN(FSArch, [disable or enable[=incl] compilation module Archive.FSArch], disable, incl)
 AX_MOD_Archive_EN(DBArch, [disable or enable[=incl] compilation module Archive.DBArch], disable, incl)
