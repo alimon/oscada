@@ -783,7 +783,7 @@ void StApp::callQtModule( )
     }
 }
 
-bool StApp::updLookFeel( )
+void StApp::updLookFeel( )
 {
     QStyle *appStl = QStyleFactory::create(mod->style().c_str());
     if(appStl)	QApplication::setStyle(appStl);
